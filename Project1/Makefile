@@ -14,5 +14,8 @@ test:
 
 run:
 	./main.out
+	python3 ./scripts/plot_approximations.py
+	python3 ./scripts/plot_absolute_errors.py
+	python3 ./scripts/plot_relative_errors.py
 clean:
 	rm *.out *.o
