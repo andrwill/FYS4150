@@ -12,7 +12,7 @@
 - [Matplotlib](https://pypi.org/project/matplotlib/) for plotting.
 
 ### Build
-- [Make](https://en.wikipedia.org/wiki/Make_(software\)) for building.
+- [Make](https://en.wikipedia.org/wiki/Make_(software)) for building.
 
 ## Build
 
