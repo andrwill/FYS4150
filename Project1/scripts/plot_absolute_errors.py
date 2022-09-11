@@ -22,7 +22,7 @@ if __name__ == "__main__":
         k = M // m
         print(df[v])
 
-        plt.plot(x[::k], np.log10(np.abs(df[v][:m] - v_exact[::k])), 
+        plt.plot(x[k::k], np.abs(df[v][1:m] - v_exact[k::k]), 
                  label=f"$n_{{steps}}={m}$")
 
     plt.title("Absolute error")

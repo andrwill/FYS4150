@@ -23,11 +23,10 @@ if __name__ == "__main__":
         k = M // m
 
         relative_errors = np.abs(np.divide(df[v][:m] - v_exact[::k], v_exact[::k]))
-        maximum_relative_errors.append(np.max(relative_errors))
+        maximum_relative_errors.append(f"{np.max(relative_errors):.3e}")
         
         relative_errors = np.log(relative_errors)
-        relative_errors[np.isnan(relative_errors)] = 0.0 # = log(1.0)
-
+        
         plt.plot(x[::k], relative_errors, label=f"$n_{{steps}} = {m}$")
 
     steps = [10**k for k in range(1,6)]
