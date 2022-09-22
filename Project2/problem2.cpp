@@ -11,12 +11,11 @@ arma::mat construct_A(int N) {
     double a = -1.0/(h*h);
     double d = 2.0/(h*h);
 
-    arma::mat A = d*arma::eye(N, N);
+    arma::mat A = arma::zeros(N, N);
 
-    for (int i = 0; i < N-1; i++) {
-        A(i+1,i) = a;
-        A(i,i+1) = a;
-    }
+    A.diag(-1) += a;
+    A.diag() += d;
+    A.diag(1) += a;
 
     return A;
 }
